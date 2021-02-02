@@ -201,7 +201,7 @@ exports.removeFromWishlist = async (req, res) => {
 };
 
 exports.createCashOrder = async (req, res) => {
-  const { cod } = req.body;
+  const { cod, couponApplied } = req.body;
   // if COD is true, create order with status of Cash On Delivery
 
   if (!cod) return res.status(400).send("Create cash order failed");
